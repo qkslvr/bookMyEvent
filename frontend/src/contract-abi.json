@@ -1,0 +1,95 @@
+{
+    "source": {
+      "hash": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "language": "ink! 4.0.0",
+      "compiler": "rustc 1.69.0-nightly"
+    },
+    "contract": {
+      "name": "event_ticket_system",
+      "version": "0.1.0",
+      "authors": ["Your Name <your.email@example.com>"]
+    },
+    "spec": {
+      "constructors": [
+        {
+          "args": [],
+          "docs": ["Creates a new EventTicketSystem contract."],
+          "name": ["new"],
+          "selector": "0x9bae9d5e"
+        }
+      ],
+      "docs": [],
+      "events": [],
+      "messages": [
+        {
+          "args": [
+            {
+              "name": "event_name",
+              "type": {
+                "displayName": ["String"],
+                "type": 7
+              }
+            },
+            {
+              "name": "expiration_date",
+              "type": {
+                "displayName": ["Timestamp"],
+                "type": 1
+              }
+            }
+          ],
+          "docs": ["Issues a new ticket."],
+          "mutates": true,
+          "name": ["issue_ticket"],
+          "payable": false,
+          "returnType": {
+            "displayName": ["TicketId"],
+            "type": 0
+          },
+          "selector": "0x1e4c4da2"
+        }
+      ]
+    },
+    "storage": {
+      "struct": {
+        "fields": [
+          {
+            "layout": {
+              "cell": {
+                "key": "0x0000000000000000000000000000000000000000000000000000000000000000",
+                "ty": 0
+              }
+            },
+            "name": "next_ticket_id"
+          }
+        ]
+      }
+    },
+    "types": [
+      {
+        "id": 0,
+        "type": {
+          "def": {
+            "primitive": "u64"
+          }
+        }
+      },
+      {
+        "id": 1,
+        "type": {
+          "def": {
+            "primitive": "u64"
+          }
+        }
+      },
+      {
+        "id": 7,
+        "type": {
+          "def": {
+            "primitive": "str"
+          }
+        }
+      }
+    ],
+    "version": "4"
+  }
